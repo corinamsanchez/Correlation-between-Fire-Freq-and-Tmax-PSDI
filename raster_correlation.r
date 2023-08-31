@@ -73,7 +73,7 @@ rm(tmin)
 m100_bt <- c(burn[[100]], tmax[[100]])
 m100_bt <- stack(m100_bt)
 
-#got this code from stackexchange 
+#got this code from https://stackoverflow.com/questions/32085858/pairwise-correlation-between-raster-layers-in-r
 jnk=layerStats(m100_bt, 'pearson', na.rm=T)
 corr_matrix=jnk$'pearson correlation coefficient'
 c100 <- corr_matrix[2,1] #correlation coefficient for burn vs tmax
